@@ -7,3 +7,5 @@ suites/forgerock_login*
 suites/temp-forgerock_login*
 shared-histories/
 
+.nyc_output
+

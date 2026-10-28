@@ -3,13 +3,93 @@
   "storage": {
     "format": "folder",
     "root": ".",
-    "history": "./.http-forge-cache/histories",
-    "results": "./.http-forge-cache/results"
+    "history": ".cache/histories",
+    "results": ".cache/results"
   },
   "request": {
     "timeout": 30000,
     "followRedirects": true,
     "maxRedirects": 10,
-    "strictSSL": true
+    "strictSSL": true,
+    "tls": {},
+    "certificates": [
+      {
+        "host": "*.dev.n.svc.tv.telus.net",
+        "certPath": "./sq5-test-automation/certs/_.dev.n.svc.tv.telus.net.crt",
+        "keyPath": "./sq5-test-automation/certs/_.dev.n.svc.tv.telus.net.pem",
+        "enabled": true
+      },
+      {
+        "host": "*.preprod.n.svc.tv.telus.net",
+        "certPath": "./sq5-test-automation/certs/_.preprod.n.svc.tv.telus.net.crt",
+        "keyPath": "./sq5-test-automation/certs/_.preprod.n.svc.tv.telus.net.pem",
+        "enabled": true
+      },
+      {
+        "host": "*.sit.n.svc.tv.telus.net",
+        "certPath": "./sq5-test-automation/certs/_.sit.n.svc.tv.telus.net.crt",
+        "keyPath": "./sq5-test-automation/certs/_.sit.n.svc.tv.telus.net.pem",
+        "enabled": true
+      }
+    ]
+  },
+  "scripts": {
+    "modulePaths": [
+      "./lib"
+    ],
+    "scope": "shared",
+    "timeout": 5000
+  },
+  "runner": {
+    "resultsRetentionDays": 7,
+    "indexPageSize": 1000,
+    "recentErrorsLimit": 20
+  },
+  "environments": {
+    "default": "demo"
+  },
+  "restClientExport": {
+    "path": "collections-rest-client",
+    "mergeGlobals": true
+  },
+  "mcp": {
+    "port": 3100,
+    "excludedCollections": [],
+    "excludedSuites": [],
+    "toolPrefix": "",
+    "maxRequestsPerCall": 500,
+    "toolMode": "auto",
+    "drilldownThreshold": 100,
+    "toolPageSize": 200,
+    "cors": {
+      "allowedOrigins": [
+        "http://localhost",
+        "http://127.0.0.1"
+      ]
+    }
+  },
+  "proxy": null,
+  "secrets": {
+    "providers": {
+      "aws": {
+        "provider": "aws"
+      },
+      "azure": {
+        "provider": "azure",
+        "vaultUrl": ""
+      },
+      "gcp": {
+        "provider": "gcp"
+      },
+      "vault": {
+        "provider": "vault"
+      },
+      "op": {
+        "provider": "1password"
+      },
+      "doppler": {
+        "provider": "doppler"
+      }
+    }
   }
 }
