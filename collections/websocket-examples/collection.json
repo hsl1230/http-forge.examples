@@ -1,0 +1,12 @@
+{
+  "$schema": "https://raw.githubusercontent.com/hsl1230/http-forge/main/resources/collection.schema.json",
+  "id": "websocket-examples",
+  "name": "WebSocket Examples",
+  "order": [
+    "websocket-echo",
+    "postman-ws-echo",
+    "websocket-binary-echo",
+    "socketio-chat",
+    "http-health"
+  ]
+}

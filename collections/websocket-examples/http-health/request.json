@@ -1,0 +1,8 @@
+{
+  "$schema": "https://raw.githubusercontent.com/hsl1230/http-forge/main/resources/request.schema.json",
+  "id": "http-health",
+  "name": "HTTP health",
+  "requestType": "http",
+  "method": "GET",
+  "url": "https://httpbin.org/get"
+}

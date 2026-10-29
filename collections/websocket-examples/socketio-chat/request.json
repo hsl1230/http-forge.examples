@@ -1,0 +1,47 @@
+{
+  "$schema": "https://raw.githubusercontent.com/hsl1230/http-forge/main/resources/request.schema.json",
+  "id": "sio-chat",
+  "name": "Socket.IO Chat",
+  "requestType": "websocket",
+  "method": "GET",
+  "url": "https://socket-io-chat.now.sh",
+  "websocket": {
+    "protocol": "socketio",
+    "messages": [
+      {
+        "id": "join",
+        "type": "text",
+        "format": "text",
+        "data": "hello from HTTP Forge",
+        "event": "new message",
+        "args": [],
+        "ack": false,
+        "enabled": true
+      }
+    ],
+    "socketio": {
+      "clientVersion": "4",
+      "handshakePath": "/socket.io",
+      "namespace": "/",
+      "auth": "",
+      "transports": [
+        "websocket",
+        "polling"
+      ],
+      "listeners": [
+        {
+          "id": "l1",
+          "name": "new message",
+          "enabled": true
+        }
+      ]
+    },
+    "settings": {
+      "handshakeTimeout": 10000,
+      "responseTimeout": 2000,
+      "reconnectionAttempts": 2,
+      "reconnectionInterval": 1000,
+      "maxMessageSizeMb": 0
+    }
+  }
+}

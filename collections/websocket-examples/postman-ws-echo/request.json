@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/hsl1230/http-forge/main/resources/request.schema.json",
+  "id": "ws-postman-echo",
+  "name": "Postman WS Echo",
+  "requestType": "websocket",
+  "method": "GET",
+  "url": "wss://ws.postman-echo.com/raw",
+  "websocket": {
+    "protocol": "websocket",
+    "messages": [
+      {
+        "id": "ping",
+        "type": "text",
+        "format": "text",
+        "data": "ping",
+        "enabled": true
+      }
+    ],
+    "settings": {
+      "responseTimeout": 1500
+    }
+  }
+}

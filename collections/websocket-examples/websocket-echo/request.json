@@ -1,0 +1,83 @@
+{
+  "$schema": "https://raw.githubusercontent.com/hsl1230/http-forge/main/resources/request.schema.json",
+  "id": "ws-echo",
+  "name": "WebSocket Echo",
+  "requestType": "websocket",
+  "method": "GET",
+  "url": "wss://echo.websocket.events",
+  "params": {},
+  "query": [],
+  "headers": [],
+  "body": {
+    "type": "none",
+    "content": null
+  },
+  "auth": {
+    "type": "inherit"
+  },
+  "settings": {
+    "timeout": 30000,
+    "followRedirects": true,
+    "followOriginalMethod": false,
+    "followAuthHeader": false,
+    "maxRedirects": 10,
+    "strictSSL": true,
+    "decompress": true,
+    "includeCookies": true
+  },
+  "websocket": {
+    "protocol": "websocket",
+    "subprotocols": [],
+    "settings": {
+      "handshakeTimeout": 10000,
+      "responseTimeout": 1000,
+      "reconnectionAttempts": 0,
+      "reconnectionInterval": 5000,
+      "maxMessageSizeMb": 0
+    },
+    "socketio": {
+      "clientVersion": "4",
+      "handshakePath": "/socket.io",
+      "namespace": "/",
+      "auth": "",
+      "transports": [
+        "websocket"
+      ],
+      "listeners": []
+    },
+    "messages": [
+      {
+        "id": "hello",
+        "name": "Message 1",
+        "type": "text",
+        "format": "text",
+        "data": "hello from HTTP Forge",
+        "enabled": true,
+        "args": [],
+        "ack": false
+      },
+      {
+        "id": "json-ping",
+        "type": "text",
+        "format": "json",
+        "data": "{\"action\":\"ping\",\"ts\":\"{{$timestamp}}\"}",
+        "enabled": true,
+        "event": "message",
+        "args": [],
+        "ack": false
+      }
+    ],
+    "frameHistory": [
+      {
+        "id": "frame-1793236287289-0",
+        "direction": "system",
+        "type": "system",
+        "format": "text",
+        "data": "getaddrinfo ENOTFOUND echo.websocket.events",
+        "time": 1793236287289,
+        "args": [],
+        "ack": false
+      }
+    ]
+  }
+}

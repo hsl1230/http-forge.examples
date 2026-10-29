@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/hsl1230/http-forge/main/resources/request.schema.json",
+  "id": "ws-binary",
+  "name": "WebSocket Binary Echo",
+  "requestType": "websocket",
+  "method": "GET",
+  "url": "wss://echo.websocket.events",
+  "websocket": {
+    "protocol": "websocket",
+    "messages": [
+      {
+        "id": "bin",
+        "type": "binary",
+        "format": "binary",
+        "encoding": "base64",
+        "data": "SGVsbG8gV29ybGQ=",
+        "enabled": true
+      }
+    ],
+    "settings": {
+      "responseTimeout": 1000
+    }
+  }
+}

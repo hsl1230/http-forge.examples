@@ -1,0 +1,1 @@
+pm.test('handshake ok', () => pm.expect(pm.response.code).to.equal(101));
