@@ -8,4 +8,5 @@ suites/temp-forgerock_login*
 shared-histories/
 
 .nyc_output
+.cache
 
